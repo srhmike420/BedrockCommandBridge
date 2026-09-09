@@ -1,0 +1,21 @@
+name: BedrockCommandBridge
+version: 0.1.1
+main: com.flamebourne.bedrockcommandbridge.BedrockCommandBridge
+api-version: '26.2'
+authors: [SRHMike]
+description: Bedrock command autocomplete bridge/filter for Geyser with optional Pl-Hide-Pro integration.
+depend: [Geyser-Spigot]
+softdepend: [Pl-Hide-Pro]
+commands:
+  bedrockcommands:
+    aliases: [bcbridge, bcommands]
+    description: Manage BedrockCommandBridge.
+    usage: /bedrockcommands <reload|status|dump>
+    permission: bedrockcommandbridge.admin
+permissions:
+  bedrockcommandbridge.admin:
+    description: Allows managing BedrockCommandBridge.
+    default: op
+  bedrockcommandbridge.group.*:
+    description: Standalone group selection permissions.
+    default: false

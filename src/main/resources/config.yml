@@ -1,0 +1,24 @@
+# BedrockCommandBridge 0.1.1
+#
+# Geyser translates the Java Brigadier command tree to Bedrock autocomplete.
+# This plugin controls which translated root commands remain visible to Bedrock players.
+
+# Optional Pl-Hide-Pro integration.
+# When enabled, BedrockCommandBridge reads groups.<group>.tabcomplete directly
+# from plugins/Pl-Hide-Pro/config.yml.
+plhide-hook:
+  enabled: false
+  config-path: plugins/Pl-Hide-Pro/config.yml
+
+# Built-in rules for servers that do not use Pl-Hide-Pro.
+# If both this and plhide-hook are enabled, their allowed command lists are merged.
+standalone:
+  enabled: true
+  config-file: commands.yml
+
+# Refresh each online player's calculated group/allowlist on the main server thread.
+refresh-interval-ticks: 100
+
+# Save the last command roots Geyser exposed for each Bedrock player.
+# Used by /bedrockcommands dump <player>.
+diagnostics: true

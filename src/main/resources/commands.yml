@@ -1,0 +1,37 @@
+# Standalone command visibility configuration.
+#
+# mode: passthrough  = keep every command Geyser receives from Paper.
+# mode: allowlist    = only keep command roots listed for the player's selected group.
+mode: passthrough
+
+groups:
+  default:
+    priority: 0
+    inherited-groups: []
+    tabcomplete:
+      - spawn
+      - warp *
+      - warps *
+      - pw *
+      - shop *
+      - home *
+      - tpa *
+      - tpaccept
+      - tpdeny
+      - rtp
+
+  # Example rank group. Give bedrockcommandbridge.group.vip to use it.
+  vip:
+    priority: 10
+    inherited-groups:
+      - default
+    tabcomplete:
+      - backpack *
+      - workbench
+
+  # Operators automatically use this group if it exists.
+  op:
+    priority: 100
+    inherited-groups: []
+    tabcomplete:
+      - '*'

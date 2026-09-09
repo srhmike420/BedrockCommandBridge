@@ -1,0 +1,1 @@
+package org.bukkit.configuration; import java.util.*; public interface ConfigurationSection { ConfigurationSection getConfigurationSection(String p); Set<String> getKeys(boolean deep); int getInt(String p,int d); java.util.List<String> getStringList(String p); }

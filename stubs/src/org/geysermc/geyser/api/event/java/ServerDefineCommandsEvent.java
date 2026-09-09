@@ -1,0 +1,1 @@
+package org.geysermc.geyser.api.event.java; import java.util.Set; import org.geysermc.geyser.api.connection.GeyserConnection; public class ServerDefineCommandsEvent { public interface CommandInfo { String name(); } public GeyserConnection connection(){return null;} public Set<? extends CommandInfo> commands(){return null;} }

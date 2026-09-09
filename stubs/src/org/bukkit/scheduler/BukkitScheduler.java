@@ -1,0 +1,1 @@
+package org.bukkit.scheduler; import org.bukkit.plugin.java.JavaPlugin; public interface BukkitScheduler { int scheduleSyncRepeatingTask(JavaPlugin p,Runnable r,long d,long t); void cancelTask(int i); void runTask(JavaPlugin p,Runnable r); }

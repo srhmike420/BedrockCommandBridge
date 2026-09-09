@@ -1,0 +1,1 @@
+package org.geysermc.geyser.api; import org.geysermc.event.EventRegistrar; public interface GeyserApi { static GeyserApi api(){return null;} EventBus eventBus(); interface EventBus { void register(EventRegistrar r,Object listener); } }
